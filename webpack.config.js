@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -7,10 +8,16 @@ module.exports = {
     rules: [
       {
         test: /\.(js)$/,
-        // eslint-disable-next-line no-dupe-keys
-        test: /\.css$/i,
         exclude: /node_modules/,
-        use: ['babel-loader', 'style-loader', 'css-loader'],
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset/inline',
       },
     ],
   },
@@ -25,4 +32,10 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, './dist'),
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/index.html'),
+      filename: 'index.html',
+    }),
+  ],
 };

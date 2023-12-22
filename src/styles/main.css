@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*remove default apperances of input and select tags*/
+select {
+  background-image: none;
+}
+
+input {
+  border: none !important;
+}
+
+input:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* make black the color of three dots on search bar*/
+
+.fa-ellipsis-vertical {
+  color: black;
+}
