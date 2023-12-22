@@ -79,7 +79,7 @@ This is a Notion-like editor, but only the H1 heading component.! It has been de
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link]()
+- [Live Demo Link](https://kgomotso196.github.io/Helpjuice-Front-End-Test/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

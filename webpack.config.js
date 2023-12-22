@@ -2,40 +2,40 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  entry: './src/scripts/main.js',
   mode: 'development',
-  entry: path.resolve(__dirname, './src/scripts/main.js'),
-  module: {
-    rules: [
-      {
-        test: /\.(js)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpg|gif)$/i,
-        type: 'asset/inline',
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['*', '.js'],
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
-    filename: 'bundle.js',
-  },
   devServer: {
-    static: path.resolve(__dirname, './dist'),
+    static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
-      filename: 'index.html',
+      template: './src/index.html',
     }),
   ],
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  module: {
+    rules: [{
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader'],
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      type: 'asset/resource',
+    },
+    {
+      test: /\.html$/i,
+      use: [{
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+        },
+      }],
+    },
+    ],
+
+  },
 };
