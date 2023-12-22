@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-/*remove default apperances of input and select tags*/
+/* remove default apperances of input and select tags */
 select {
   background-image: none;
 }
@@ -19,7 +19,7 @@ select:focus {
   box-shadow: none !important;
 }
 
-/* make black the color of three dots on search bar*/
+/* make black the color of three dots on search bar */
 
 .fa-ellipsis-vertical {
   color: black;

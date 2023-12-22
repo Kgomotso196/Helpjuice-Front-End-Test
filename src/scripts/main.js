@@ -1,10 +1,9 @@
 import '../styles/main.css';
 
-const container = document.getElementById('creator-container'); //container of editor area
+const container = document.getElementById('creator-container'); // container of editor area
 const inputContainer = document.querySelector('.input-container');
 const creator = document.querySelector('input');
 
-// create h1 element function
 const addHeader1Element = (text) => {
   const h1 = document.createElement('h1');
   h1.setAttribute('class', 'text-3xl font-bold w-full mt-5');
@@ -21,10 +20,9 @@ const addTextElement = (text) => {
   container.insertBefore(p, inputContainer);
 };
 
-// when type / shows block, /1 change field for header and /+1 change field for text
 const getValue = (command) => {
   let value = command;
-  console.log(value);
+  //  console.log(value);
   if (creator.value === '/1') {
     creator.value = '';
     creator.setAttribute('name', 'creator');
@@ -38,11 +36,11 @@ const getValue = (command) => {
   }
   document.addEventListener('keydown', (e) => {
     if (
-      e.key === 'Enter' &&
-      e.target.name === 'creator' &&
-      e.target.value !== ''
+      e.key === 'Enter'
+      && e.target.name === 'creator'
+      && e.target.value !== ''
     ) {
-      console.log(value);
+      //  console.log(value);
       if (value === '/1') {
         addHeader1Element(e.target.value);
         creator.value = '';
