@@ -78,9 +78,8 @@ This is a Notion-like editor, but only the H1 heading component.! It has been de
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
 - [Live Demo Link](https://kgomotso196.github.io/Helpjuice-Front-End-Test/dist/)
-
+- [Walk-Through Video](https://drive.google.com/file/d/1CIB5iuXfT3-IQcdBJVL1dVuOwcf7QyVB/view?usp=sharing)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
