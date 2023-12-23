@@ -1,4 +1,5 @@
-import '../styles/main.css';
+import './styles/main.css';
+import textImage from './assets/text.png';
 
 const container = document.getElementById('creator-container'); // container of editor area
 const inputContainer = document.querySelector('.input-container');
@@ -70,14 +71,14 @@ creator.addEventListener('input', (e) => {
     model.innerHTML = `
       <div class="model-content shadow-2xl w-2/5">
         <div class="flex items-center space-x-4">
-          <img src="assets/text.png" class="opacity-60 w-16 h-16">
+          <img src="${textImage}" class="opacity-60 w-16 h-16">
           <div class="model-header">
             <h1 class="text-2xl font-bold">Heading 1</h1>
             <p class="model-close opacity-70">Type 1 to create a header</p>
           </div>
         </div>
         <div class="flex items-center space-x-4 mt-2">
-          <img src="assets/text.png" class="opacity-60 w-16 h-16">
+          <img src="${textImage}" class="opacity-60 w-16 h-16">
           <div class="model-header">
             <h1 class="text-2xl font-bold">Text 1</h1>
             <p class="model-close opacity-70">Type +1 to create a text</p>
