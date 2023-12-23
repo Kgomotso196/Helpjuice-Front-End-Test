@@ -122,7 +122,7 @@ Install this project with: npm Example commands:
 
 ### Usage
 
-To run the project, execute the following command: `npm test`
+To run the project, execute the following command: `npm run build` followed by `npm start`
 Example command:
 
 ```sh
